@@ -6,9 +6,20 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NewPage } from './new-page/new-page.page';
+import { AnotherPagePage } from './another-page/another-page';
+import { HomePage } from './home/home.page';
+import { SharedComponent } from './shared/shared.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  // Declare all components here in declaration
+  declarations: [
+    AppComponent,
+    NewPage,
+    AnotherPagePage,
+    HomePage,
+    SharedComponent,
+  ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
